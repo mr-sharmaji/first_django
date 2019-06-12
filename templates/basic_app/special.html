@@ -1,0 +1,9 @@
+{% extends 'basic_app/base.html' %}
+{% block body_block %}
+{% if user.is_authenticated %}
+<h1>Welcome {{ user.get_username }}! </h1>
+
+{% else %}
+<h1>You are not registered to view up this page please register to view the content </h1>
+{% endif %}
+{% endblock %}
